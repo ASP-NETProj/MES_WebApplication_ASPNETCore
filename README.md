@@ -1,0 +1,1 @@
+# WebApplication1ASPNETCoreBlank(VS2022) ok razor+ ok read_SQL_MES
