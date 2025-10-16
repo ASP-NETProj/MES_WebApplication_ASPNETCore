@@ -1,0 +1,22 @@
+﻿UUT_SeriXlNumHer,Station,Operator_Name,Status,Test_Date,Test_Time,Shipment_Date,Shipment_Time
+X12H12,1,Budi Setiawan,PASS,12-Oct-25,15:00,,
+X12H13,1,Budi Setiawan,FAIL,12-Oct-25,15:00,,
+X12H14,1,Budi Setiawan,PASS,12-Oct-25,15:00,,
+X12H15,1,Budi Setiawan,FAIL,12-Oct-25,15:00,,
+X12H16,1,Budi Setiawan,PASS,12-Oct-25,15:00,22-Oct-25,0:00:00
+X12H17,1,Budi Setiawan,FAIL,12-Oct-25,15:00,,
+X12H18,1,Budi Setiawan,PASS,12-Oct-25,15:00,21-Oct-25,0:00:00
+X12H19,1,Budi Setiawan,FAIL,12-Oct-25,15:00,,
+X12H20,1,Budi Setiawan,PASS,12-Oct-25,15:00,12-Oct-25,15:00:00
+X12H21,1,Budi Setiawan,FAIL,12-Oct-25,15:00,,
+X12H22,1,Budi Setiawan,PASS,12-Oct-25,15:00,13-Oct-25,15:00:00
+X12H23,1,Budi Setiawan,FAIL,12-Oct-25,15:00,,
+X12H24,1,Budi Setiawan,FAIL,12-Oct-25,15:00,,
+X12H12,1,Budi Setiawan,PASS,13-Oct-25,16:00,,
+X12H12,3,Budi Setiawan,FAIL,14-Oct-25,17:00,,
+X12H14,2,Budi Setiawan,PASS,15-Oct-25,18:00,,
+X12H14,1,Budi Setiawan,FAIL,16-Oct-25,19:00,,
+X12H14,4,Budi Setiawan,PASS,17-Oct-25,20:00,19-Oct-25,20:00:00
+X12H24,1,Budi Setiawan,PASS,12-Oct-25,15:00,,
+X12H24,1,Budi Setiawan,PASS,12-Oct-25,15:00,,
+X12H24,1,Budi Setiawan,PASS,12-Oct-25,15:00,18-Oct-25,15:00:00

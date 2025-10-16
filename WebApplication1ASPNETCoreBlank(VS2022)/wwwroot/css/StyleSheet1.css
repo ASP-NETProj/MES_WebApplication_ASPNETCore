@@ -1,0 +1,290 @@
+﻿/* Import modern Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General reset and body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0078D7, #00B7C2);
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Navigation Bar */
+nav {
+    background: #222;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    padding: 1rem 2rem;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 0.9rem;
+}
+
+nav li:hover {
+    background: #0078D7;
+    color: #fff;
+}
+
+/* Main content layout */
+#mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Sidebar (aside) */
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+aside input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+aside input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+aside input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Sections and articles */
+section {
+    flex: 3 1 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section + section {
+    margin-top: 20px;
+}
+
+article {
+    background: #f9fafc;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-left: 4px solid #0078D7;
+    border-radius: 5px;
+}
+
+article h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Ordered Lists */
+ol {
+    margin-left: 20px;
+}
+
+ol li {
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #mainContent {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 1rem;
+        border-top: 1px solid #333;
+    }
+}
+
+/* Beautiful Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Table header */
+table thead {
+    background: linear-gradient(135deg, #0078D7, #00B7C2);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Table body */
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Zebra striping */
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fb;
+}
+
+/* Hover effect */
+table tbody tr:hover {
+    background-color: #eaf6ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Status cell color variations */
+table td:nth-child(4) {
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Rounded table corners fix */
+table thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        padding: 10px;
+    }
+
+    table td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+    }
+}
+
+/* Row color highlighting for PASS / FAIL status */
+.status-pass {
+    background-color: #c8e6c9 !important; /* light green */
+    color: #1b5e20; /* dark green text */
+}
+
+.status-fail {
+    background-color: #ffcdd2 !important; /* light red */
+    color: #b71c1c; /* dark red text */
+}
+
+/* Optional hover effect for clarity */
+.status-pass:hover {
+    background-color: #a5d6a7 !important;
+}
+
+.status-fail:hover {
+    background-color: #ef9a9a !important;
+}
+
+/* Make status text bold for emphasis */
+.status-pass td:nth-child(4),
+.status-fail td:nth-child(4) {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+table tbody tr {
+    transition: background-color 0.3s ease;
+}
+

@@ -1,0 +1,145 @@
+﻿@page
+@model WebApplication1ASPNETCoreBlank_VS2022_.Pages.IndexModel
+@{
+    ViewData["Title"] = "HTML 5 Sample";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/StyleSheet1.css" />
+</head>
+<body>
+    <header>
+        <h1>Budi Setiawan ASP.NET Core Razor MVC</h1>
+        <h1>Manufacturing Execution System (MES)</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Station #1</li>
+            <li>Station #2</li>
+            <li>Station #3</li>
+            <li>Station #4</li>
+            <li>Station #5</li>
+            <li>Station #6</li>
+        </ul>
+    </nav>
+
+    <div id="mainContent">
+        <aside>
+            <form method="post">
+                
+                <input type="text" asp-for="SerialNumber" placeholder="Input S/N" id="serialInput" autofocus />
+                <button type="submit">Submit</button>
+            </form>
+        </aside>
+
+        <section>
+            @if (!string.IsNullOrEmpty(Model.ResultMessage))
+            {
+                <p><strong>@Model.ResultMessage</strong></p>
+            }
+
+            
+                <h2>Summary :</h2>
+                <table border="1" style="width:100%; text-align:left; border-collapse:collapse;">
+                    <thead>
+                        <tr>                            
+                            <th>Serial Number</th>
+                            <th>Station</th>
+                            <th>Operator Name</th>
+                            <th>Status</th>
+                            <th>Test Date</th>
+                            <th>Test Time</th>
+                            <th>Shipment Date</th>
+                            <th>Shipment Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TestData)
+                        {
+                        // Determine row class based on status
+                        var statusClass = item.Status?.ToUpper() == "PASS" ? "status-pass"
+                        : item.Status?.ToUpper() == "FAIL" ? "status-fail"
+                        : "";
+
+                        <tr class="@statusClass">
+                            <td data-label="Serial Number">@item.UUT_SerialNumber</td>
+                            <td data-label="Station">@item.Station</td>
+                            <td data-label="Operator Name">@item.Operator_Name</td>
+                            <td data-label="Status">@item.Status</td>
+                            
+                            <td data-label="Test Date">
+                            @(item.Test_Date == null 
+                                ? "-" 
+                                : item.Test_Date.Value.ToString("yyyy-MMM-dd"))
+                            </td>
+
+                            <td data-label="Test Time">
+                                @(item.Test_Time == null 
+                                    ? "-" 
+                                : item.Test_Time.Value.ToString(@"hh\:mm\:ss"))
+                            </td>
+
+                            <td data-label="Shipment Date">
+                                @(item.Shipment_Date == null 
+                                    ? "-" 
+                                    : item.Shipment_Date.Value.ToString("yyyy-MMM-dd"))
+                            </td>
+
+                            <td data-label="Shipment Time">
+                                @(item.Shipment_Time == null 
+                                    ? "-" 
+                                    : item.Shipment_Time.Value.ToString(@"hh\:mm\:ss"))
+                            </td>
+
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            
+
+        </section>
+
+
+
+
+        <section>
+            <h2>Section 2</h2>
+            <article>Article 1</article>
+            <article>Article 2</article>
+            <article>Article 3</article>
+            <article>
+                <h3>Top Ten Baseball Teams</h3>
+                <ol reversed>
+                    <li>Coughlin</li>
+                    <li>Hazleton Area</li>
+                    <li>Pittston Area</li>
+                    <li>Nanticoke Area</li>
+                    <li>Hanover Area</li>
+                    <li>Lake Lehman</li>
+                    <li>Crestwood</li>
+                    <li>Wyoming Valley West</li>
+                    <li>Dallas</li>
+                    <li>Wyoming Area</li>
+                </ol>
+            </article>
+        </section>
+    </div>
+
+    <h2>Top Teams</h2>
+    <ol>
+        <li>Budi Setiawan</li>
+        <li>Sitti Aisyah Mahmud</li>
+        <li>Aira Nur Atikah</li>
+        <li>Ayyub Setiawan</li>
+    </ol>
+
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>
