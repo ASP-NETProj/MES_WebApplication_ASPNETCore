@@ -199,8 +199,8 @@ Permission is hereby granted...
 
 ## Contact / Support
 
-* Project maintainers: *Your Name / Team*
-* Email: [you@example.com](mailto:you@example.com)
+* Project maintainers: *Budi Setiawan*
+* Email: [bd.setiawan.2021@gmail.com](mailto:bd.setiawan.2021@gmail.com)
 * Issues: Use GitHub Issues for bug reports or feature requests
 
 ---
